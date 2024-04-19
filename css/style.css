@@ -65,6 +65,7 @@ li {
 /* Section Background */
 .home,
 .about,
+.details,
 .services,
 .plans,
 .work,
@@ -124,6 +125,19 @@ li {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+/*-------------------------------------------------------------------------------------*/
+
+
+.details {
+	background-image: url("../assets/images/home.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+/*-------------------------------------------------------------------------------------*/
 
 
 /**********************/

@@ -29,69 +29,103 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/favicon.png">
+
+
+
+
+
+    <style>
+    /* Additional CSS rule for the details page */
+    .g {
+    background-image: url("../assets/images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+    /* Other existing styles */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3; /* Light grey background color */
+    color: #333;
+    text-align: left;
+    }
+    /* Navbar styles */
+    .navbar {
+    width: 100%;
+    background-color: black; /* Changed background color to black */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    }
+
+    .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+    }
+    /* Other styles as needed */
+    </style>
+
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+    <!-- Navigation bar -->
+    <!--<nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
         <div class="container">
-
-            <!-- Image Logo -->
-            <!-- <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a> -->
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="navbar-brand logo-text" href="index.html">Mirko</a>
-
+            <a class="navbar-brand logo-text" href="index.html">Telecom</a>
             <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                        <a class="nav-link active" aria-current="page" href="g.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="details.html">Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#plans">Plans</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false" href="#">Drop</a>
-
-                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article.html">Article Details</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="aboutus.html">About Us</a>
                     </li>
                 </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
-            </div> <!-- end of navbar-collapse -->
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+            </div>
+        </div>
+    </nav>-->
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand logo-text" href="index.html">Telecom</a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="g.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Home -->
     <section class="home py-5 d-flex align-items-center" id="header">
         <div class="container text-light py-5" data-aos="fade-right">
@@ -106,7 +140,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="my-3">
-                <a class="btn" href="#plans">View Plans</a>
+                <a class="btn" href="Services.html">View Services</a>
             </div>
         </div> <!-- end of container -->
     </section> <!-- end of home -->
@@ -224,7 +258,7 @@
     <div class="bottom py-2 text-light">
         <div class="container d-flex justify-content-between">
             <div>
-                <p>Copyright © Your name</p><br>
+                <p>Copyright ï¿½ Your name</p><br>
                 <p>Distributed by: <a href="https://themewagon.com/">Themewagon</a></p>
             </div>
             <div>
