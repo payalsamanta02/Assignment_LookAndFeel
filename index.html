@@ -1,1 +1,204 @@
-<!--Your HTML code here-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Telecom Website</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background color */
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            background-color: #ff7f50; /* Coral color */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                margin: 0 20px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+        /* Container styles */
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff0f5; /* Lavender blush background color */
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section styles */
+        .section {
+            margin: 20px 0; /* Space between sections */
+        }
+
+        h1, h2, h3 {
+            color: #4682b4; /* Steel blue color */
+        }
+
+        p, ul, li {
+            color: #4b0082; /* Indigo color */
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ff4500; /* Orange-red color */
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline; /* Underline links on hover */
+            }
+
+        /* Collapsible story styles */
+        .collapsible {
+            background-color: #f8f8f8;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: #fffaf0; /* Floral white background */
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive styling */
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 50px 20px;
+                padding: 15px;
+            }
+
+            .navbar a {
+                margin: 0 10px;
+            }
+
+            .collapsible {
+                padding: 8px;
+                font-size: 16px;
+            }
+
+            .content {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Services.html">Services</a>
+        <a href="Details.html">Details</a>
+        <a href="AboutUs.html">AboutUs</a>
+    </div>
+
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Welcome to Our Telecom Website</h1>
+        <p>Discover the latest in telecommunications technology and services. Our team is dedicated to providing the best solutions for your communication needs.</p>
+
+        <!-- Explore Our Services section -->
+        <div class="section">
+            <h3>Explore Our Services</h3>
+            <p>We offer a wide range of services tailored to your needs, including:</p>
+            <ul>
+                <li>High-speed internet</li>
+                <li>Mobile and landline phone services</li>
+                <li>TV and streaming packages</li>
+                <li>Business communication solutions</li>
+            </ul>
+        </div>
+
+        <!-- Why Choose Us? section -->
+        <div class="section">
+            <h3>Why Choose Us?</h3>
+            <p>Our commitment to quality and customer satisfaction makes us the go-to choice for telecom services. We offer:</p>
+            <ul>
+                <li>Reliable and efficient service</li>
+                <li>Competitive pricing</li>
+                <li>24/7 customer support</li>
+                <li>Customizable packages</li>
+            </ul>
+        </div>
+
+        <!-- Customer Stories section -->
+        <div class="section">
+            <h3>Customer Stories</h3>
+
+            <!-- Collapsible Story 1 -->
+            <button class="collapsible">Story 1: Happy Customer</button>
+            <div class="content">
+                <p>"I switched to this telecom provider and couldn't be happier. Their customer support is excellent and their services are top-notch!" - Jane Doe</p>
+            </div>
+
+            <!-- Collapsible Story 2 -->
+            <button class="collapsible">Story 2: Business Solutions</button>
+            <div class="content">
+                <p>"Our business has seen significant improvements in communication since partnering with this provider. Highly recommended!" - John Smith</p>
+            </div>
+
+            <!-- Collapsible Story 3 -->
+            <button class="collapsible">Story 3: Smooth Streaming</button>
+            <div class="content">
+                <p>"Their TV and streaming packages are fantastic. The quality and variety of channels available are amazing!" - Emily Green</p>
+            </div>
+        </div>
+
+        <p>Contact us today to learn more about our offerings and how we can serve you better. <a href="#">Get in touch</a>.</p>
+    </div>
+
+    <!-- JavaScript for collapsible stories -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
