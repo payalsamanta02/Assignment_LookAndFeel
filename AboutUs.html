@@ -1,6 +1,4 @@
- 
- 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,9 +42,11 @@
     <link href="./css/swiper.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
+    
+    
     <style>
-        /* Use the same styles for body and container */
-        
+
+
 
         /* Author section styles */
         .author-section {
@@ -123,7 +123,30 @@
                 font-weight: bold;
                 font-size: 18px;
             }
+
+
+        
+        /* Styles for the data model container */
+        .data-model-container {
+             /* Use fixed positioning to keep the image at the bottom of the page */
+             /* Place the container at the bottom of the page */
+             /* Center the container horizontally */
+             /* Translate the container to center it */
+            width: auto; /* Set the width to auto to allow the image to maintain its original size */
+            padding: 10px; /* Optional: Add padding around the image */
+        }
+
+        /* Styles for the data model image */
+        .data-model-img {
+            width: auto; /* Use auto width to preserve the original aspect ratio */
+            height: auto; /* Use auto height to preserve the original aspect ratio */
+            max-width: 100%; /* Optional: Limit the image width to 100% of the container */
+        }
+
     </style>
+
+
+   
 
 
 
@@ -185,34 +208,44 @@
         <p>  .</p>
         <p>  .</p>
         <h1>Contact Us</h1>
-        <h2>Meet our team of authors and their expertise:</h2>
+        <h2>Meet our team members and their expertise:</h2>
 
         <!-- Author Section -->
         <div class="author-section">
             <!-- Author 1 -->
             <div class="author-card">
-                <img src="author1.jpg" alt="Author 1">
+                <img src="./assets/images/Author1.jpeg" alt="Author 1">
                 <h3>Payal Samanta </h3>
                 <p>Author 1 is an expert in telecommunications and has been with our company for over 10 years. They specialize in mobile networks and customer relations.</p>
             </div>
 
             <!-- Author 2 -->
             <div class="author-card">
-                <img src="author2.jpg" alt="Author 2">
+                <img src="./assets/images/author2.jpg" alt="Author 2">
                 <h3>Neha Satpute </h3>
                 <p>Author 2 is our lead technical writer and specializes in high-speed internet and advanced networking solutions. They are a valuable asset to our team.</p>
             </div>
 
             <!-- Author 3 -->
             <div class="author-card">
-                <img src="author3.jpg" alt="Author 3">
+                <img src="./assets/images/author3.jpg" alt="Author 3">
                 <h3>Aakesh Kumar Murala </h3>
                 <p>Author 3 is an experienced professional in streaming and TV packages. They provide insightful recommendations and exceptional customer support.</p>
             </div>
 
-            
+
+
         </div>
+
     </div>
+
+    <!-- Add this new div at the bottom of your HTML file -->
+    <h3> Data Model</h3>
+    <div class="data-model-container">
+        <img src="./assets/images/data_model.jpeg" alt="Data Model" class="data-model-img">
+    </div>
+
+
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->
     <script src="./js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
