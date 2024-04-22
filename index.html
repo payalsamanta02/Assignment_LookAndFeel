@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirko - Broadband Company</title>
+    <title>MoonMax - Broadband Company</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -57,42 +57,7 @@
                 font-size: 18px;
             }
 
-        /* Additional CSS for appointment management */
-        .appointment-section {
-            margin: 20px 0;
-        }
-
-            .appointment-section h3 {
-                margin-bottom: 15px;
-            }
-
-            .appointment-section input,
-            .appointment-section button {
-                margin-bottom: 10px;
-            }
-
-            .appointment-section button {
-                margin-right: 10px;
-            }
-
-        .appointment-list {
-            margin-top: 20px;
-        }
-
-            .appointment-list h4 {
-                margin-bottom: 10px;
-            }
-
-            .appointment-list ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            .appointment-list li {
-                margin-bottom: 10px;
-                display: flex;
-                justify-content: space-between;
-            }
+        
     </style>
 </head>
 
@@ -110,7 +75,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="Appointments.html">Appointments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="details.html">Details</a>
@@ -137,7 +102,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
             </div>
             <div class="my-3">
-                <a class="btn" href="Services.html">View Services</a>
+                <a class="btn" href="Appointments.html">Make an Appointment</a>
             </div>
         </div>
     </section>
@@ -165,44 +130,14 @@
         </div>
     </section>
 
-    <!-- Manage Appointments Section -->
-    <section class="appointment-section container">
-        <h3>Manage Appointments</h3>
-
-        <!-- Form for scheduling a new appointment -->
-        <div class="schedule-appointment">
-            <h5>Schedule New Appointment:</h5>
-            <input type="text" id="appointment-name" placeholder="Your Name">
-            <input type="text" id="appointment-service" placeholder="Service Type">
-            <input type="datetime-local" id="appointment-date-time">
-            <button type="button" onclick="scheduleAppointment()">Schedule Appointment</button>
-        </div>
-
-        <!-- Form for editing an existing appointment -->
-        <div class="edit-appointment mt-3">
-            <h5>Edit Appointment:</h5>
-            <input type="text" id="edit-appointment-name" placeholder="Current Appointment Name">
-            <input type="text" id="new-appointment-name" placeholder="New Name">
-            <input type="text" id="new-appointment-service" placeholder="New Service">
-            <input type="datetime-local" id="new-appointment-date-time">
-            <button type="button" onclick="editAppointment()">Edit Appointment</button>
-        </div>
-
-        <!-- Form for canceling an existing appointment -->
-        <div class="cancel-appointment mt-3">
-            <h5>Cancel Appointment:</h5>
-            <input type="text" id="cancel-appointment-name" placeholder="Appointment Name to Cancel">
-            <button type="button" onclick="cancelAppointment()">Cancel Appointment</button>
-        </div>
-    </section>
-
+   
     <!-- Footer -->
     <section class="footer text-light">
         <div class="container">
             <div class="row" data-aos="fade-right">
                 <div class="col-lg-3 py-4 py-md-5">
                     <div class="d-flex align-items-center">
-                        <h4 class="">Mirko</h4>
+                        <h4 class="">MoonMax</h4>
                     </div>
                     <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus animi repudiandae explicabo esse maxime, impedit rem voluptatibus amet error quas.</p>
                     <div class="d-flex">
@@ -233,7 +168,7 @@
                         </div>
                         <div class="d-flex align-items-center py-2">
                             <i class="fas fa-caret-right"></i>
-                            <a href="#"><p class="ms-3">Services</p></a>
+                            <a href="#"><p class="ms-3">Appointments</p></a>
                         </div>
                         <div class="d-flex align-items-center py-2">
                             <i class="fas fa-caret-right"></i>
@@ -299,6 +234,7 @@
             </div>
         </div> <!-- end of container -->
     </div> <!-- end of bottom -->
+
     <!-- Back To Top Button -->
     <button onclick="topFunction()" id="myBtn">
         <img src="assets/images/up-arrow.png" alt="alternative">
@@ -310,131 +246,10 @@
     <script src="./js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="./js/aos.js"></script> <!-- AOS on Animation Scroll -->
     <script src="./js/script.js"></script> <!-- Custom scripts -->
-    <!-- JavaScript functions for managing appointments -->
-    <script>
-        const appointments = [
-            {
-                name: 'John Doe',
-                service: 'Internet Repair',
-                dateTime: '2024-04-22T15:00'
-            },
-            {
-                name: 'Jane Smith',
-                service: 'Network Upgrade',
-                dateTime: '2024-04-24T09:00'
-            }
-        ];
-
-        // Function to schedule a new appointment
-        function scheduleAppointment() {
-            const name = document.getElementById('appointment-name').value;
-            const service = document.getElementById('appointment-service').value;
-            const dateTime = document.getElementById('appointment-date-time').value;
-
-            if (name && service && dateTime) {
-                // Add the new appointment to the appointments array
-                appointments.push({
-                    name,
-                    service,
-                    dateTime
-                });
-                // Assuming appointments is an array of objects containing appointment data
-                localStorage.setItem('appointments', JSON.stringify(appointments));
-
-                // Display the updated appointments list in an alert
-                displayAppointmentsInAlert();
 
 
-                // Clear input fields after scheduling the appointment
-                document.getElementById('appointment-name').value = '';
-                document.getElementById('appointment-service').value = '';
-                document.getElementById('appointment-date-time').value = '';
-            }
-        }
 
-        // Function to edit an existing appointment
-        function editAppointment() {
-            const editName = document.getElementById('edit-appointment-name').value;
-            const newName = document.getElementById('new-appointment-name').value;
-            const newService = document.getElementById('new-appointment-service').value;
-            const newDateTime = document.getElementById('new-appointment-date-time').value;
-
-            // Find the appointment to edit
-            for (let i = 0; i < appointments.length; i++) {
-                if (appointments[i].name === editName) {
-                    if (newName) {
-                        appointments[i].name = newName;
-                    }
-                    if (newService) {
-                        appointments[i].service = newService;
-                    }
-                    if (newDateTime) {
-                        appointments[i].dateTime = newDateTime;
-                    }
-
-                    // Display the updated appointments list in an alert
-                    displayAppointmentsInAlert();
-
-                    // Clear input fields after editing the appointment
-                    document.getElementById('edit-appointment-name').value = '';
-                    document.getElementById('new-appointment-name').value = '';
-                    document.getElementById('new-appointment-service').value = '';
-                    document.getElementById('new-appointment-date-time').value = '';
-
-                    break;
-                }
-            }
-        }
-
-        // Function to cancel an appointment
-        function cancelAppointment() {
-            const nameToCancel = document.getElementById('cancel-appointment-name').value;
-
-            // Filter out the appointment to cancel
-            const updatedAppointments = appointments.filter(appointment => appointment.name !== nameToCancel);
-
-            // Update the appointments array and display the updated list in an alert
-            appointments.length = 0;
-            updatedAppointments.forEach(appointment => appointments.push(appointment));
-            displayAppointmentsInAlert();
-
-            // Clear the input field after canceling the appointment
-            document.getElementById('cancel-appointment-name').value = '';
-        }
-
-        // Function to display appointments list in an alert box
-        function displayAppointmentsInAlert() {
-            let upcomingAppointments = '';
-            appointments.forEach(appointment => {
-                upcomingAppointments += `${appointment.name} - ${appointment.service} - ${appointment.dateTime}\n`;
-            });
-
-            alert(`Upcoming Appointments:\n${upcomingAppointments}`);
-        }
-
-        // Back to top button functionality
-        const myBtn = document.getElementById("myBtn");
-
-        window.onscroll = function () {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                myBtn.style.display = "block";
-            } else {
-                myBtn.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-        // Assuming appointments is an array of objects containing appointment data
-localStorage.setItem('appointments', JSON.stringify(appointments));
-
-    </script>
+    
 </body>
 
 </html>

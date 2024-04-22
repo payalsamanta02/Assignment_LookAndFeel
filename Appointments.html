@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments | Telecom Website</title>
+
+    <!-- Importing Google Fonts and CSS styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="./css/aos.min.css" rel="stylesheet">
+    <link href="./css/swiper.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Explore our range of Appointments tailored to meet your needs">
+    <meta name="author" content="Telecom Company">
+    <meta property="og:site_name" content="Telecom Company" />
+    <meta property="og:site" content="https://www.telecomcompany.com/" />
+    <meta property="og:title" content="Appointments | Telecom Company" />
+    <meta property="og:description" content="Explore our range of Appointments tailored to meet your needs" />
+    <meta property="og:image" content="https://www.telecomcompany.com/images/Appointments.jpg" />
+    <meta property="og:url" content="https://www.telecomcompany.com/Appointments" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/images/favicon.png">
+
+
+
+
+
+
+    <style>
+        /* Additional CSS rule for the details page */
+        .Appointments {
+            background-image: url("../assets/images/home.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /* Other existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d3d3d3; /* Light grey background color */
+            color: #333;
+            text-align: center;
+        }
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            background-color: black; /* Changed background color to black */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                margin: 0 20px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        /* Service Cards Styles */
+
+        /* Change color of h4 elements to black */
+        .row h4.rannu {
+            color: white; /* Change h4 color to black */
+        }
+        .h4.rannu {
+            color: white;
+        }
+        /* Change color of p elements with py-3 para-light class to white */
+        .py-3.para-light {
+            color: #fff; /* Changed to white */
+        }
+
+        /* Change color of p elements with para-light class to black */
+        .para-light {
+            color: #000; /* Change para-light text color to black */
+        }
+
+        /* Other styles as needed */
+        
+        /* Service card styles */
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+            /* Service card heading */
+            .service-card h3 {
+                color: #4682b4;
+            }
+
+            /* Service card subheading */
+            .service-card h4 {
+                color: #000; /* Change h4 color to black */
+            }
+
+            /* Service card text */
+            .service-card p {
+                color: #000; /* Change text color to black */
+                line-height: 1.5;
+            }
+
+            /* Service card list */
+            .service-card ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            /* Service card list items */
+            .service-card li {
+                margin-bottom: 5px;
+                color: #000; /* Change list item text color to black */
+            }
+
+            /* Service card price */
+            .service-card .price {
+                color: #ff4500;
+                font-weight: bold;
+            }
+
+
+        /* Additional CSS for appointment management */
+        .appointment-section {
+            margin: 20px 0;
+        }
+
+            .appointment-section h3 {
+                margin-bottom: 15px;
+            }
+
+            .appointment-section input,
+            .appointment-section button {
+                margin-bottom: 10px;
+            }
+
+            .appointment-section button {
+                margin-right: 10px;
+            }
+
+        .appointment-list {
+            margin-top: 20px;
+        }
+
+            .appointment-list h4 {
+                margin-bottom: 10px;
+            }
+
+            .appointment-list ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            .appointment-list li {
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        /* CSS to add space around the appointment button     */
+
+        /* Add margin before and after the appointment button */
+        .appointment-btn {
+            margin: 20px 10px; /* Adjust the margin values as desired */
+        }
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand logo-text" href="index.html">Telecom</a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ms-auto navbar-nav-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Appointments.html">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="details.html">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container mt-5" data-aos="fade-right">
+        <h1 class="headline">Appointments</h1>
+        <h2>Make you're Appointments Conveniently</h2>
+
+
+
+        <!-- Manage Appointments Section -->
+        <section class="appointment-section container">
+            <h3>Manage Appointments</h3>
+
+            <!-- Form for scheduling a new appointment -->
+            <div class="schedule-appointment">
+                <h5>Schedule New Appointment:</h5>
+                <input type="text" id="appointment-name" placeholder="Your Name">
+                <input type="text" id="appointment-service" placeholder="Service Type">
+                <input type="datetime-local" id="appointment-date-time">
+                <button type="button" onclick="scheduleAppointment()">Schedule Appointment</button>
+            </div>
+
+            <!-- Form for editing an existing appointment -->
+            <div class="edit-appointment mt-3">
+                <h5>Edit Appointment:</h5>
+                <input type="text" id="edit-appointment-name" placeholder="Current Appointment Name">
+                <input type="text" id="new-appointment-name" placeholder="New Name">
+                <input type="text" id="new-appointment-service" placeholder="New Service">
+                <input type="datetime-local" id="new-appointment-date-time">
+                <button type="button" onclick="editAppointment()">Edit Appointment</button>
+            </div>
+
+            <!-- Form for canceling an existing appointment -->
+            <div class="cancel-appointment mt-3">
+                <h5>Cancel Appointment:</h5>
+                <input type="text" id="cancel-appointment-name" placeholder="Appointment Name to Cancel">
+                <button type="button" onclick="cancelAppointment()">Cancel Appointment</button>
+            </div>
+
+            <!-- Display Appointments -->
+            <div>
+            <section>
+                <h2>Upcoming Appointments</h2>
+                <button onclick="displayAppointmentsInAlert()">show appointments</button>
+                <div id="appointments-container"></div>
+            </section>
+        </div>
+
+            </section>
+
+        </div>
+
+        <!-- Footer section-->
+            <section class="footer text-light">
+                <div class="container">
+                    <div class="row" data-aos="fade-right">
+                        <div class="col-lg-3 py-4 py-md-5">
+                            <div class="d-flex align-items-center">
+                                <h4 class="rannu">Telecom</h4>
+                            </div>
+                            <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f fa-2x py-2"></i>
+                                    </a>
+                                </div>
+                                <div class="me-3">
+                                    <a href="#">
+                                        <i class="fab fa-twitter fa-2x py-2"></i>
+                                    </a>
+                                </div>
+                                <div class="me-3">
+                                    <a href="#">
+                                        <i class="fab fa-instagram fa-2x py-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 py-4 py-md-5">
+                            <div>
+                                <h4 class="rannu">Quick Links</h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="about.html"><p class="ms-3">About Us</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="Appointments.html"><p class="ms-3">Appointments</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="#"><p class="ms-3">Plans</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="#"><p class="ms-3">Contact</p></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 py-4 py-md-5">
+                            <div>
+                                <h4 class="rannu">Useful Links</h4>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="privacy.html"><p class="ms-3">Privacy Policy</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="terms.html"><p class="ms-3">Terms & Conditions</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="#"><p class="ms-3">Disclaimer</p></a>
+                                </div>
+                                <div class="d-flex align-items-center py-2">
+                                    <i class="fas fa-caret-right"></i>
+                                    <a href="#"><p class="ms-3">FAQ</p></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 py-4 py-md-5">
+                            <div class="d-flex align-items-center">
+                                <h4 class="rannu">Newsletter</h4>
+                            </div>
+                            <p class="py-3 para-light">Subscribe to our newsletter for updates.</p>
+                            <div class="d-flex align-items-center">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control p-2" placeholder="Enter Email" aria-label="Recipient's email">
+                                    <button class="btn-secondary text-light"><i class="fas fa-envelope fa-lg"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom -->
+            <div class="bottom py-2 text-light">
+                <div class="container d-flex justify-content-between">
+                    <div>
+                        <p>Copyright © Telecom Company</p><br>
+                        <p>Distributed by: <a href="https://themewagon.com/">Themewagon</a></p>
+                    </div>
+                    <div>
+                        <i class="fab fa-cc-visa fa-lg p-1"> </i>
+                        <i class="fab fa-cc-mastercard fa-lg p-1"></i>
+                        <i class="fab fa-cc-paypal fa-lg p-1"></i>
+                        <i class="fab fa-cc-amazon-pay fa-lg p-1"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scripts -->
+            <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->
+            <script src="./js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+            <script src="./js/swiper.min.js"></script><!-- Swiper for image and text sliders -->
+            <script src="./js/aos.js"></script><!-- AOS on Animation Scroll -->
+            <script src="./js/script.js"></script>  <!-- Custom scripts -->
+            <!-- JavaScript functions for managing appointments -->
+            <script>
+                const appointments = [
+                    {
+                        name: 'John Doe',
+                        service: 'Internet Repair',
+                        dateTime: '2024-04-22T15:00'
+                    },
+                    {
+                        name: 'Jane Smith',
+                        service: 'Network Upgrade',
+                        dateTime: '2024-04-24T09:00'
+                    }
+                ];
+
+                // Function to schedule a new appointment
+                function scheduleAppointment() {
+                    const name = document.getElementById('appointment-name').value;
+                    const service = document.getElementById('appointment-service').value;
+                    const dateTime = document.getElementById('appointment-date-time').value;
+
+                    if (name && service && dateTime) {
+                        // Add the new appointment to the appointments array
+                        appointments.push({
+                            name,
+                            service,
+                            dateTime
+                        });
+                        // Assuming appointments is an array of objects containing appointment data
+                        localStorage.setItem('appointments', JSON.stringify(appointments));
+
+                        // Display the updated appointments list in an alert
+                        displayAppointmentsInAlert();
+
+
+                        // Clear input fields after scheduling the appointment
+                        document.getElementById('appointment-name').value = '';
+                        document.getElementById('appointment-service').value = '';
+                        document.getElementById('appointment-date-time').value = '';
+                    }
+                }
+
+                // Function to edit an existing appointment
+                function editAppointment() {
+                    const editName = document.getElementById('edit-appointment-name').value;
+                    const newName = document.getElementById('new-appointment-name').value;
+                    const newService = document.getElementById('new-appointment-service').value;
+                    const newDateTime = document.getElementById('new-appointment-date-time').value;
+
+                    // Find the appointment to edit
+                    for (let i = 0; i < appointments.length; i++) {
+                        if (appointments[i].name === editName) {
+                            if (newName) {
+                                appointments[i].name = newName;
+                            }
+                            if (newService) {
+                                appointments[i].service = newService;
+                            }
+                            if (newDateTime) {
+                                appointments[i].dateTime = newDateTime;
+                            }
+
+                            // Display the updated appointments list in an alert
+                            displayAppointmentsInAlert();
+
+                            // Clear input fields after editing the appointment
+                            document.getElementById('edit-appointment-name').value = '';
+                            document.getElementById('new-appointment-name').value = '';
+                            document.getElementById('new-appointment-service').value = '';
+                            document.getElementById('new-appointment-date-time').value = '';
+
+                            break;
+                        }
+                    }
+                }
+
+                // Function to cancel an appointment
+                function cancelAppointment() {
+                    const nameToCancel = document.getElementById('cancel-appointment-name').value;
+
+                    // Filter out the appointment to cancel
+                    const updatedAppointments = appointments.filter(appointment => appointment.name !== nameToCancel);
+
+                    // Update the appointments array and display the updated list in an alert
+                    appointments.length = 0;
+                    updatedAppointments.forEach(appointment => appointments.push(appointment));
+                    displayAppointmentsInAlert();
+
+                    // Clear the input field after canceling the appointment
+                    document.getElementById('cancel-appointment-name').value = '';
+                }
+
+                // Function to display appointments list in an alert box
+                function displayAppointmentsInAlert() {
+                    let upcomingAppointments = '';
+                    appointments.forEach(appointment => {
+                        upcomingAppointments += `${appointment.name} - ${appointment.service} - ${appointment.dateTime}\n`;
+                    });
+
+                    alert(`Upcoming Appointments:\n${upcomingAppointments}`);
+                }
+
+                // Back to top button functionality
+                const myBtn = document.getElementById("myBtn");
+
+                window.onscroll = function () {
+                    scrollFunction();
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        myBtn.style.display = "block";
+                    } else {
+                        myBtn.style.display = "none";
+                    }
+                }
+
+                function topFunction() {
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                }
+                // Assuming appointments is an array of objects containing appointment data
+                localStorage.setItem('appointments', JSON.stringify(appointments));
+
+            </script>
+</body>
+
+</html>
+
