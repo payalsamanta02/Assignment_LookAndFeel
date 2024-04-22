@@ -37,7 +37,7 @@
     <style>
         /* Additional CSS rule for the details page */
         .Appointments {
-            background-image: url("../assets/images/home.jpg");
+            background-image: url("./assets/images/home.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -76,6 +76,7 @@
         .row h4.rannu {
             color: white; /* Change h4 color to black */
         }
+
         .h4.rannu {
             color: white;
         }
@@ -90,50 +91,7 @@
         }
 
         /* Other styles as needed */
-        
-        /* Service card styles */
-        .service-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
 
-            /* Service card heading */
-            .service-card h3 {
-                color: #4682b4;
-            }
-
-            /* Service card subheading */
-            .service-card h4 {
-                color: #000; /* Change h4 color to black */
-            }
-
-            /* Service card text */
-            .service-card p {
-                color: #000; /* Change text color to black */
-                line-height: 1.5;
-            }
-
-            /* Service card list */
-            .service-card ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            /* Service card list items */
-            .service-card li {
-                margin-bottom: 5px;
-                color: #000; /* Change list item text color to black */
-            }
-
-            /* Service card price */
-            .service-card .price {
-                color: #ff4500;
-                font-weight: bold;
-            }
 
 
         /* Additional CSS for appointment management */
@@ -178,13 +136,72 @@
         .appointment-btn {
             margin: 20px 10px; /* Adjust the margin values as desired */
         }
+    </style>
+    <!-- CSS to style the appointments table -->
+    <style>
+        /* Style the appointments table */
+        .appointments-table {
+            width: 100%; /* Full width */
+            border-collapse: collapse; /* Merge adjacent cells' borders */
+        }
 
+            /* Style table headers */
+            .appointments-table thead {
+                background-color: lightgreen; /* Light grey background color */
+                font-weight: bold; /* Bold text */
+            }
 
+            /* Style table rows */
+            .appointments-table tr {
+                border-bottom: 1px solid #ddd; /* Light grey border between rows */
+            }
 
+            /* Style table cells */
+            .appointments-table td, .appointments-table th {
+                padding: 10px; /* Padding inside cells */
+                text-align: left; /* Align text to the left */
+            }
 
+            /* Add hover effect for table rows */
+            .appointments-table tr:hover {
+                background-color: #f5f5f5; /* Light grey background on hover */
+            }
 
+        /* Additional styles as needed */
+        /* Style the appointments table */
+        .appointments-table {
+            width: 100%; /* Full width */
+            border-collapse: collapse; /* Merge adjacent cells' borders */
+            border: 2px solid #333; /* Set the table border to be bolder with a solid style and a dark color */
+        }
+
+            /* Style table headers */
+            .appointments-table thead {
+                background-color: #f2f2f2; /* Light grey background color */
+                font-weight: bold; /* Bold text */
+                border: 2px solid #333; /* Set the border to be bolder with a solid style and a dark color */
+            }
+
+            /* Style table rows */
+            .appointments-table tr {
+                border-bottom: 2px solid #333; /* Bolder bottom border for each row */
+            }
+
+            /* Style table cells */
+            .appointments-table td, .appointments-table th {
+                padding: 10px; /* Padding inside cells */
+                text-align: left; /* Align text to the left */
+                border-right: 2px solid #333; /* Bolder right border for each cell */
+            }
+
+            /* Add hover effect for table rows */
+            .appointments-table tr:hover {
+                background-color: #f5f5f5; /* Light grey background on hover */
+            }
 
     </style>
+
+
 </head>
 
 <body>
@@ -217,13 +234,13 @@
     <!-- Main content -->
     <div class="container mt-5" data-aos="fade-right">
         <h1 class="headline">Appointments</h1>
-        <h2>Make you're Appointments Conveniently</h2>
+        <h2>Schedule your appointments with easey</h2>
 
 
 
         <!-- Manage Appointments Section -->
         <section class="appointment-section container">
-            <h3>Manage Appointments</h3>
+
 
             <!-- Form for scheduling a new appointment -->
             <div class="schedule-appointment">
@@ -247,259 +264,401 @@
             <!-- Form for canceling an existing appointment -->
             <div class="cancel-appointment mt-3">
                 <h5>Cancel Appointment:</h5>
-                <input type="text" id="cancel-appointment-name" placeholder="Appointment Name to Cancel">
+                <input type="text" id="cancel-appointment-name" placeholder="Appointment Name">
                 <button type="button" onclick="cancelAppointment()">Cancel Appointment</button>
             </div>
 
             <!-- Display Appointments -->
             <div>
-            <section>
-                <h2>Upcoming Appointments</h2>
-                <button onclick="displayAppointmentsInAlert()">show appointments</button>
-                <div id="appointments-container"></div>
-            </section>
-        </div>
+                <section>
+                    <h5>Upcoming Appointments</h5>
+                    <button onclick="displayAppointmentsInAlert()">Show Appointments</button>
+                    <div id="appointments-container"></div>
+                </section>
+            </div>
 
-            </section>
 
-        </div>
 
-        <!-- Footer section-->
-            <section class="footer text-light">
-                <div class="container">
-                    <div class="row" data-aos="fade-right">
-                        <div class="col-lg-3 py-4 py-md-5">
-                            <div class="d-flex align-items-center">
-                                <h4 class="rannu">Telecom</h4>
-                            </div>
-                            <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <div class="d-flex">
-                                <div class="me-3">
-                                    <a href="#">
-                                        <i class="fab fa-facebook-f fa-2x py-2"></i>
-                                    </a>
-                                </div>
-                                <div class="me-3">
-                                    <a href="#">
-                                        <i class="fab fa-twitter fa-2x py-2"></i>
-                                    </a>
-                                </div>
-                                <div class="me-3">
-                                    <a href="#">
-                                        <i class="fab fa-instagram fa-2x py-2"></i>
-                                    </a>
-                                </div>
-                            </div>
+
+
+            <!-- Create a table to display the appointments -->
+            <div>
+                <section>
+                    <h5>Upcoming Appointments</h5>
+                    <button onclick="displayAppointmentsInTable()">Show Appointments</button>
+                    <table id="appointments-table" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Service</th>
+                                <th>Date & Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="appointments-tbody">
+                            <!-- The appointments will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Footer section-->
+    <section class="footer text-light">
+        <div class="container">
+            <div class="row" data-aos="fade-right">
+                <div class="col-lg-3 py-4 py-md-5">
+                    <div class="d-flex align-items-center">
+                        <h4 class="rannu">Telecom</h4>
+                    </div>
+                    <p class="py-3 para-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <a href="#">
+                                <i class="fab fa-facebook-f fa-2x py-2"></i>
+                            </a>
                         </div>
-
-                        <div class="col-lg-3 py-4 py-md-5">
-                            <div>
-                                <h4 class="rannu">Quick Links</h4>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="about.html"><p class="ms-3">About Us</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="Appointments.html"><p class="ms-3">Appointments</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="#"><p class="ms-3">Plans</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="#"><p class="ms-3">Contact</p></a>
-                                </div>
-                            </div>
+                        <div class="me-3">
+                            <a href="#">
+                                <i class="fab fa-twitter fa-2x py-2"></i>
+                            </a>
                         </div>
-
-                        <div class="col-lg-3 py-4 py-md-5">
-                            <div>
-                                <h4 class="rannu">Useful Links</h4>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="privacy.html"><p class="ms-3">Privacy Policy</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="terms.html"><p class="ms-3">Terms & Conditions</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="#"><p class="ms-3">Disclaimer</p></a>
-                                </div>
-                                <div class="d-flex align-items-center py-2">
-                                    <i class="fas fa-caret-right"></i>
-                                    <a href="#"><p class="ms-3">FAQ</p></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 py-4 py-md-5">
-                            <div class="d-flex align-items-center">
-                                <h4 class="rannu">Newsletter</h4>
-                            </div>
-                            <p class="py-3 para-light">Subscribe to our newsletter for updates.</p>
-                            <div class="d-flex align-items-center">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control p-2" placeholder="Enter Email" aria-label="Recipient's email">
-                                    <button class="btn-secondary text-light"><i class="fas fa-envelope fa-lg"></i></button>
-                                </div>
-                            </div>
+                        <div class="me-3">
+                            <a href="#">
+                                <i class="fab fa-instagram fa-2x py-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Bottom -->
-            <div class="bottom py-2 text-light">
-                <div class="container d-flex justify-content-between">
+                <div class="col-lg-3 py-4 py-md-5">
                     <div>
-                        <p>Copyright © Telecom Company</p><br>
-                        <p>Distributed by: <a href="https://themewagon.com/">Themewagon</a></p>
+                        <h4 class="rannu">Quick Links</h4>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="about.html"><p class="ms-3">About Us</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="Appointments.html"><p class="ms-3">Appointments</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-3">Plans</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-3">Contact</p></a>
+                        </div>
                     </div>
+                </div>
+
+                <div class="col-lg-3 py-4 py-md-5">
                     <div>
-                        <i class="fab fa-cc-visa fa-lg p-1"> </i>
-                        <i class="fab fa-cc-mastercard fa-lg p-1"></i>
-                        <i class="fab fa-cc-paypal fa-lg p-1"></i>
-                        <i class="fab fa-cc-amazon-pay fa-lg p-1"></i>
+                        <h4 class="rannu">Useful Links</h4>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="privacy.html"><p class="ms-3">Privacy Policy</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="terms.html"><p class="ms-3">Terms & Conditions</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-3">Disclaimer</p></a>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <i class="fas fa-caret-right"></i>
+                            <a href="#"><p class="ms-3">FAQ</p></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 py-4 py-md-5">
+                    <div class="d-flex align-items-center">
+                        <h4 class="rannu">Newsletter</h4>
+                    </div>
+                    <p class="py-3 para-light">Subscribe to our newsletter for updates.</p>
+                    <div class="d-flex align-items-center">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control p-2" placeholder="Enter Email" aria-label="Recipient's email">
+                            <button class="btn-secondary text-light"><i class="fas fa-envelope fa-lg"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Scripts -->
-            <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->
-            <script src="./js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
-            <script src="./js/swiper.min.js"></script><!-- Swiper for image and text sliders -->
-            <script src="./js/aos.js"></script><!-- AOS on Animation Scroll -->
-            <script src="./js/script.js"></script>  <!-- Custom scripts -->
-            <!-- JavaScript functions for managing appointments -->
+    <!-- Bottom -->
+    <div class="bottom py-2 text-light">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <p>Copyright © Telecom Company</p><br>
+                <p>Distributed by: <a href="https://themewagon.com/">Themewagon</a></p>
+            </div>
+            <div>
+                <i class="fab fa-cc-visa fa-lg p-1"> </i>
+                <i class="fab fa-cc-mastercard fa-lg p-1"></i>
+                <i class="fab fa-cc-paypal fa-lg p-1"></i>
+                <i class="fab fa-cc-amazon-pay fa-lg p-1"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/bootstrap.min.js"></script><!-- Bootstrap framework -->
+    <script src="./js/purecounter.min.js"></script> <!-- Purecounter counter for statistics numbers -->
+    <script src="./js/swiper.min.js"></script><!-- Swiper for image and text sliders -->
+    <script src="./js/aos.js"></script><!-- AOS on Animation Scroll -->
+    <script src="./js/script.js"></script>  <!-- Custom scripts -->
+    <!-- JavaScript functions for managing appointments -->
+    <!--<script>
+        const appointments = [
+            {
+                name: 'John Doe',
+                service: 'Internet Repair',
+                dateTime: '2024-04-22T15:00'
+            },
+            {
+                name: 'Jane Smith',
+                service: 'Network Upgrade',
+                dateTime: '2024-04-24T09:00'
+            }
+        ];
+
+        // Function to schedule a new appointment
+        function scheduleAppointment() {
+            const name = document.getElementById('appointment-name').value;
+            const service = document.getElementById('appointment-service').value;
+            const dateTime = document.getElementById('appointment-date-time').value;
+
+            if (name && service && dateTime) {
+                // Add the new appointment to the appointments array
+                appointments.push({
+                    name,
+                    service,
+                    dateTime
+                });
+                // Assuming appointments is an array of objects containing appointment data
+                localStorage.setItem('appointments', JSON.stringify(appointments));
+
+                // Display the updated appointments list in an alert
+                displayAppointmentsInAlert();
+
+
+                // Clear input fields after scheduling the appointment
+                document.getElementById('appointment-name').value = '';
+                document.getElementById('appointment-service').value = '';
+                document.getElementById('appointment-date-time').value = '';
+            }
+        }
+
+        // Function to edit an existing appointment
+        function editAppointment() {
+            const editName = document.getElementById('edit-appointment-name').value;
+            const newName = document.getElementById('new-appointment-name').value;
+            const newService = document.getElementById('new-appointment-service').value;
+            const newDateTime = document.getElementById('new-appointment-date-time').value;
+
+            // Find the appointment to edit
+            for (let i = 0; i < appointments.length; i++) {
+                if (appointments[i].name === editName) {
+                    if (newName) {
+                        appointments[i].name = newName;
+                    }
+                    if (newService) {
+                        appointments[i].service = newService;
+                    }
+                    if (newDateTime) {
+                        appointments[i].dateTime = newDateTime;
+                    }
+
+                    // Display the updated appointments list in an alert
+                    displayAppointmentsInAlert();
+
+                    // Clear input fields after editing the appointment
+                    document.getElementById('edit-appointment-name').value = '';
+                    document.getElementById('new-appointment-name').value = '';
+                    document.getElementById('new-appointment-service').value = '';
+                    document.getElementById('new-appointment-date-time').value = '';
+
+                    break;
+                }
+            }
+        }
+
+        // Function to cancel an appointment
+        function cancelAppointment() {
+            const nameToCancel = document.getElementById('cancel-appointment-name').value;
+
+            // Filter out the appointment to cancel
+            const updatedAppointments = appointments.filter(appointment => appointment.name !== nameToCancel);
+
+            // Update the appointments array and display the updated list in an alert
+            appointments.length = 0;
+            updatedAppointments.forEach(appointment => appointments.push(appointment));
+            displayAppointmentsInAlert();
+
+            // Clear the input field after canceling the appointment
+            document.getElementById('cancel-appointment-name').value = '';
+        }
+
+        // Function to display appointments list in an alert box
+        function displayAppointmentsInAlert() {
+            let upcomingAppointments = '';
+            appointments.forEach(appointment => {
+                upcomingAppointments += ${appointment.name} - ${appointment.service} - ${appointment.dateTime}\n;
+            });
+
+            alert(Upcoming Appointments:\n${upcomingAppointments});
+        }
+
+        // Back to top button functionality
+        const myBtn = document.getElementById("myBtn");
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                myBtn.style.display = "block";
+            } else {
+                myBtn.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+        // Assuming appointments is an array of objects containing appointment data
+        localStorage.setItem('appointments', JSON.stringify(appointments));-->
+
+
+
             <script>
                 const appointments = [
-                    {
-                        name: 'John Doe',
-                        service: 'Internet Repair',
-                        dateTime: '2024-04-22T15:00'
-                    },
-                    {
-                        name: 'Jane Smith',
-                        service: 'Network Upgrade',
-                        dateTime: '2024-04-24T09:00'
-                    }
+                {
+                    name: 'John Doe',
+                service: 'Internet Repair',
+                dateTime: '2024-04-22T15:00'
+        },
+                {
+                    name: 'Jane Smith',
+                service: 'Network Upgrade',
+                dateTime: '2024-04-24T09:00'
+        }
                 ];
 
                 // Function to schedule a new appointment
                 function scheduleAppointment() {
-                    const name = document.getElementById('appointment-name').value;
-                    const service = document.getElementById('appointment-service').value;
-                    const dateTime = document.getElementById('appointment-date-time').value;
+        const name = document.getElementById('appointment-name').value;
+                const service = document.getElementById('appointment-service').value;
+                const dateTime = document.getElementById('appointment-date-time').value;
 
-                    if (name && service && dateTime) {
-                        // Add the new appointment to the appointments array
-                        appointments.push({
-                            name,
-                            service,
-                            dateTime
-                        });
-                        // Assuming appointments is an array of objects containing appointment data
-                        localStorage.setItem('appointments', JSON.stringify(appointments));
+                if (name && service && dateTime) {
+                    // Add the new appointment to the appointments array
+                    appointments.push({
+                        name,
+                        service,
+                        dateTime
+                    });
+                localStorage.setItem('appointments', JSON.stringify(appointments));
 
-                        // Display the updated appointments list in an alert
-                        displayAppointmentsInAlert();
+                // Display the updated appointments list in the table
+                displayAppointmentsInTable();
 
-
-                        // Clear input fields after scheduling the appointment
-                        document.getElementById('appointment-name').value = '';
-                        document.getElementById('appointment-service').value = '';
-                        document.getElementById('appointment-date-time').value = '';
-                    }
-                }
+                // Clear input fields after scheduling the appointment
+                document.getElementById('appointment-name').value = '';
+                document.getElementById('appointment-service').value = '';
+                document.getElementById('appointment-date-time').value = '';
+        }
+    }
 
                 // Function to edit an existing appointment
                 function editAppointment() {
-                    const editName = document.getElementById('edit-appointment-name').value;
-                    const newName = document.getElementById('new-appointment-name').value;
-                    const newService = document.getElementById('new-appointment-service').value;
-                    const newDateTime = document.getElementById('new-appointment-date-time').value;
+        const editName = document.getElementById('edit-appointment-name').value;
+                const newName = document.getElementById('new-appointment-name').value;
+                const newService = document.getElementById('new-appointment-service').value;
+                const newDateTime = document.getElementById('new-appointment-date-time').value;
 
-                    // Find the appointment to edit
-                    for (let i = 0; i < appointments.length; i++) {
-                        if (appointments[i].name === editName) {
-                            if (newName) {
-                                appointments[i].name = newName;
-                            }
-                            if (newService) {
-                                appointments[i].service = newService;
-                            }
-                            if (newDateTime) {
-                                appointments[i].dateTime = newDateTime;
-                            }
-
-                            // Display the updated appointments list in an alert
-                            displayAppointmentsInAlert();
-
-                            // Clear input fields after editing the appointment
-                            document.getElementById('edit-appointment-name').value = '';
-                            document.getElementById('new-appointment-name').value = '';
-                            document.getElementById('new-appointment-service').value = '';
-                            document.getElementById('new-appointment-date-time').value = '';
-
-                            break;
-                        }
-                    }
+                // Find the appointment to edit
+                for (let i = 0; i < appointments.length; i++) {
+            if (appointments[i].name === editName) {
+                if (newName) {
+                    appointments[i].name = newName;
                 }
+                if (newService) {
+                    appointments[i].service = newService;
+                }
+                if (newDateTime) {
+                    appointments[i].dateTime = newDateTime;
+                }
+
+                // Display the updated appointments list in the table
+                displayAppointmentsInTable();
+
+                // Clear input fields after editing the appointment
+                document.getElementById('edit-appointment-name').value = '';
+                document.getElementById('new-appointment-name').value = '';
+                document.getElementById('new-appointment-service').value = '';
+                document.getElementById('new-appointment-date-time').value = '';
+
+                break;
+            }
+        }
+    }
 
                 // Function to cancel an appointment
                 function cancelAppointment() {
-                    const nameToCancel = document.getElementById('cancel-appointment-name').value;
+        const nameToCancel = document.getElementById('cancel-appointment-name').value;
 
-                    // Filter out the appointment to cancel
-                    const updatedAppointments = appointments.filter(appointment => appointment.name !== nameToCancel);
+        // Filter out the appointment to cancel
+        const updatedAppointments = appointments.filter(appointment => appointment.name !== nameToCancel);
 
-                    // Update the appointments array and display the updated list in an alert
-                    appointments.length = 0;
-                    updatedAppointments.forEach(appointment => appointments.push(appointment));
-                    displayAppointmentsInAlert();
+                // Update the appointments array and display the updated list in the table
+                appointments.length = 0;
+        updatedAppointments.forEach(appointment => appointments.push(appointment));
+                displayAppointmentsInTable();
 
-                    // Clear the input field after canceling the appointment
-                    document.getElementById('cancel-appointment-name').value = '';
-                }
+                // Clear the input field after canceling the appointment
+                document.getElementById('cancel-appointment-name').value = '';
+    }
 
-                // Function to display appointments list in an alert box
-                function displayAppointmentsInAlert() {
-                    let upcomingAppointments = '';
-                    appointments.forEach(appointment => {
-                        upcomingAppointments += `${appointment.name} - ${appointment.service} - ${appointment.dateTime}\n`;
-                    });
+                // Function to display appointments list in the table
+                function displayAppointmentsInTable() {
+        const appointmentsTableBody = document.getElementById('appointments-tbody');
+                appointmentsTableBody.innerHTML = '';
 
-                    alert(`Upcoming Appointments:\n${upcomingAppointments}`);
-                }
+        appointments.forEach(appointment => {
+            const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const serviceCell = document.createElement('td');
+                const dateTimeCell = document.createElement('td');
 
-                // Back to top button functionality
-                const myBtn = document.getElementById("myBtn");
+                nameCell.textContent = appointment.name;
+                serviceCell.textContent = appointment.service;
+                dateTimeCell.textContent = appointment.dateTime;
 
-                window.onscroll = function () {
-                    scrollFunction();
-                };
+                row.appendChild(nameCell);
+                row.appendChild(serviceCell);
+                row.appendChild(dateTimeCell);
 
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        myBtn.style.display = "block";
-                    } else {
-                        myBtn.style.display = "none";
-                    }
-                }
+                appointmentsTableBody.appendChild(row);
+        });
+    }
 
-                function topFunction() {
-                    document.body.scrollTop = 0; // For Safari
-                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                }
                 // Assuming appointments is an array of objects containing appointment data
                 localStorage.setItem('appointments', JSON.stringify(appointments));
 
-            </script>
+
+
+    </script>
 </body>
 
 </html>
-
